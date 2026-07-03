@@ -1,0 +1,165 @@
+---
+title: Tenisin Tarihçesi 3
+sidebar_label: Tenisin Tarihçesi 3
+sidebar_position: 4
+---
+
+import React from 'react';
+
+export const BentoGrid = ({ children }) => (
+  <div style={{
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+    gap: '20px',
+    fontFamily: 'var(--ifm-font-family-base, system-ui, sans-serif)',
+    color: 'var(--ifm-color-content)',
+    marginTop: '20px'
+  }}>
+    {children}
+  </div>
+);
+
+export const Card = ({ children, style = {} }) => (
+  <div style={{
+    background: 'var(--ifm-card-background-color, #f9f9f9)',
+    border: '1px solid var(--ifm-toc-border-color, #eee)',
+    padding: '24px',
+    borderRadius: '16px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
+    ...style
+  }}>
+    {children}
+  </div>
+);
+
+Bugün milyonlarca insanın takip ettiği, modern teknolojilerin ve atletizmin zirve yaptığı tenis, aslında yüzyıllar süren köklü bir evrimin ürünüdür. Saray bahçelerinden doğan bu spor, aristokratik bir eğlenceden küresel bir endüstriye dönüşmüştür.
+
+<BentoGrid>
+
+  {/* KUTU 1: GİRİŞ (GENİŞ KART) */}
+  <Card style={{ gridColumn: 'span 2', background: 'linear-gradient(135deg, #111, #222)', color: '#fff', border: 'none' }}>
+    <div>
+      <span style={{ color: '#bcff00', textTransform: 'uppercase', fontSize: '0.8rem', fontWeight: 'bold', letterSpacing: '1.5px' }}>Zaman Tüneli</span>
+      <h2 style={{ fontSize: '2rem', margin: '10px 0', fontWeight: '800', color: '#fff', border: 'none' }}>Saray Bahçelerinden Küresel Endüstriye</h2>
+      <p style={{ color: '#ccc', fontSize: '1rem', margin: 0 }}>
+        Aristokratik bir eğlenceden küresel bir çılgınlığa uzanan hikayeye hoş geldin! Kortların evrimini keşfetmek için kutuları kaydır.
+      </p>
+    </div>
+  </Card>
+
+  {/* KUTU 2: BİLİYOR MUYDUNUZ? (NEON VURGU KARTI) */}
+  <Card style={{ background: '#bcff00', color: '#000', border: 'none' }}>
+    <div>
+      <div style={{ fontSize: '1.8rem', marginBottom: '8px' }}>🤔</div>
+      <h3 style={{ margin: '0 0 8px 0', fontWeight: '800', fontSize: '1.2rem', color: '#000' }}>Biliyor muydun?</h3>
+      <p style={{ fontSize: '0.9rem', margin: 0, fontWeight: '500', lineHeight: '1.4' }}>
+        Tenisteki <strong>15, 30, 40</strong> puanlama sisteminin kökeni, orta çağ saraylarındaki <strong>saat kadranlarına</strong> (15, 30, 45 dakikaları) dayanıyor. 45 puanı, zamanla dilde yuvarlanarak 40 olmuş!
+      </p>
+    </div>
+    <span style={{ fontSize: '0.75rem', fontWeight: 'bold', opacity: 0.6, textTransform: 'uppercase', marginTop: '12px' }}>#GününBilgisi</span>
+  </Card>
+
+  {/* KUTU 3: JEU DE PAUME */}
+  <Card>
+    <div>
+      <span style={{ color: 'var(--ifm-color-secondary-darkest)', fontSize: '0.75rem', fontWeight: '700' }}>12. - 16. YÜZYIL</span>
+      <h3 style={{ fontSize: '1.25rem', margin: '5px 0 10px 0', fontWeight: '800' }}>Jeu de Paume (Avuç İçi)</h3>
+      <p style={{ fontSize: '0.9rem', opacity: '0.9', margin: 0 }}>
+        Her şey Fransız manastırlarında rahiplerin topa çıplak elle vurmasıyla başladı. Zamanla eldivenler ve ardından bağlar geldi.
+      </p>
+    </div>
+    <div style={{ background: 'rgba(188, 255, 0, 0.1)', padding: '10px', borderRadius: '8px', borderLeft: '4px solid #bcff00', fontSize: '0.8rem', fontStyle: 'italic', marginTop: '12px', color: 'var(--ifm-color-content)' }}>
+      <strong>"Tenez!"</strong> Oyuncular servis atmadan önce rakiplerini "Tut/Yakala!" diye uyarırdı. İngilizler bunu "Tennis" diye telaffuz edince sporun adı doğdu.
+    </div>
+  </Card>
+
+  {/* KUTU 4: KRALİYETİN SPORU */}
+  <Card>
+    <div>
+      <span style={{ color: 'var(--ifm-color-secondary-darkest)', fontSize: '0.75rem', fontWeight: '700' }}>16. YÜZYIL</span>
+      <h3 style={{ fontSize: '1.25rem', margin: '5px 0 10px 0', fontWeight: '800' }}>Kralların Oyunu 👑</h3>
+      <p style={{ fontSize: '0.9rem', opacity: '0.9', margin: 0 }}>
+        Ahşap çerçeveli ve bağırsaktan (gut) telleri olan ilk gerçek raketler sahneye çıktı. Fransa Kralı I. François ve İngiltere Kralı VIII. Henry gibi hükümdarların tutkusu spora aristokratik bir kimlik kazandırdı.
+      </p>
+    </div>
+  </Card>
+
+  {/* KUTU 5: MODERN TENİSİN DOĞUŞU */}
+  <Card>
+    <div>
+      <span style={{ color: 'var(--ifm-color-secondary-darkest)', fontSize: '0.75rem', fontWeight: '700' }}>19. YÜZYIL</span>
+      <h3 style={{ fontSize: '1.25rem', margin: '5px 0 10px 0', fontWeight: '800' }}>Lawn Tennis & Kauçuk Devrimi</h3>
+      <p style={{ fontSize: '0.9rem', opacity: '0.9', margin: 0 }}>
+        Endüstri Devrimi ile tenis çim sahalara taşındı. En büyük teknik kırılma 1850'lerde yaşandı: <strong>Vulkanize kauçuğun icadı!</strong> Bu sayede çim üzerinde mükemmel seken içi gaz dolu sert lastik toplar üretildi.
+      </p>
+    </div>
+  </Card>
+
+  {/* KUTU 6: PATALER VE İLKLER */}
+  <Card style={{ background: '#111', color: '#fff', border: 'none' }}>
+    <div>
+      <span style={{ color: '#bcff00', fontSize: '0.75rem', fontWeight: '700' }}>MİLAT: 1874 & 1877</span>
+      <h3 style={{ fontSize: '1.25rem', margin: '5px 0 10px 0', fontWeight: '800', color: '#fff' }}>İlk Wimbledon ve Kum Saati Kortlar</h3>
+      <p style={{ fontSize: '0.85rem', color: '#aaa', marginBottom: '8px' }}>
+        Binbaşı Wingfield, 1874'te <em>"Sphairistiké"</em> adısıyla kum saati şeklinde bir kortun patentini aldı. Modern kuralların temeli buydu.
+      </p>
+      <p style={{ fontSize: '0.85rem', color: '#aaa', margin: 0 }}>
+        1877'te All England Club kuralları standartlaştırmak için <strong>tarihin ilk Wimbledon turnuvasını</strong> düzenledi.
+      </p>
+    </div>
+    <div style={{ marginTop: '12px', fontSize: '0.7rem', textTransform: 'uppercase', color: '#bcff00', fontWeight: 'bold' }}>
+      🚨 Hata Kodu 404: Kadınlar kategorisi henüz yüklenmedi.
+    </div>
+  </Card>
+
+  {/* KUTU 7: ULUSLARARASI KANATLAR VE AMATÖRLÜK KRİZİ */}
+  <Card style={{ gridColumn: 'span 2' }}>
+    <div>
+      <span style={{ color: 'var(--ifm-color-secondary-darkest)', fontSize: '0.75rem', fontWeight: '700' }}>1900 - 1968</span>
+      <h3 style={{ fontSize: '1.25rem', margin: '5px 0 10px 0', fontWeight: '800' }}>Kurumsallaşma ve Amatörlük Çıkmazı 🛑</h3>
+      <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', marginTop: '10px' }}>
+        <div style={{ flex: '1 1 200px' }}>
+          <p style={{ fontSize: '0.85rem', opacity: '0.9', margin: 0 }}>
+            <strong>1900 - Davis Kupası:</strong> Tenis uluslararası bir takım savaşına dönüştü.<br/>
+            <strong>1913 - ILTF:</strong> Uluslararası Federasyon kuruldu, kurallar tek merkezde toplandı.
+          </p>
+        </div>
+        <div style={{ flex: '1 1 200px', borderLeft: '2px solid var(--ifm-toc-border-color)', paddingLeft: '15px' }}>
+          <p style={{ fontSize: '0.85rem', opacity: '0.9', margin: 0 }}>
+            <strong>Büyük Kriz:</strong> Tenis katı bir şekilde "amatör" kalmak zorundaydı. Para kazanmak isteyen sporcular profesyonel turnuvalara geçince Grand Slam'lerden menediliyorlardı.
+          </p>
+        </div>
+      </div>
+    </div>
+  </Card>
+
+  {/* KUTU 8: AÇIK DÖNEM DEVREYE GİRİYOR (GENİŞ KART) */}
+  <Card style={{ gridColumn: 'span 3', border: '2px solid var(--ifm-color-content)' }}>
+    <div>
+      <span style={{ background: 'var(--ifm-color-content)', color: 'var(--ifm-background-color)', padding: '4px 8px', fontSize: '0.7rem', fontWeight: 'bold', borderRadius: '4px' }}>1968 - GÜNÜMÜZ</span>
+      <h3 style={{ fontSize: '1.6rem', margin: '12px 0', fontWeight: '900' }}>Büyük Devrim: Açık Dönem (Open Era)</h3>
+      <p style={{ fontSize: '0.95rem', opacity: '0.9', marginBottom: '16px' }}>
+        1968 yılında ayrımcılığa son verildi; profesyoneller ve amatörler aynı kortta buluştu. Sponsorlar aktı, televizyonlar canlı yayına geçti ve tenis küresel bir çılgınlığa dönüştü.
+      </p>
+      
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
+        <div style={{ background: 'var(--ifm-background-color)', padding: '12px', borderRadius: '8px', border: '1px solid var(--ifm-toc-border-color)' }}>
+          <strong style={{ display: 'block', marginBottom: '4px', fontSize: '0.9rem' }}>🛠️ Teknolojik Sıçrama</strong>
+          <span style={{ fontSize: '0.8rem', opacity: '0.8' }}>80'lerde ahşap raketler emekli oldu. Önce alüminyum, sonra hafif ve ölümcül <strong>grafit</strong> geldi. Top hızlandı, oyun sertleşti.</span>
+        </div>
+        <div style={{ background: 'var(--ifm-background-color)', padding: '12px', borderRadius: '8px', border: '1px solid var(--ifm-toc-border-color)' }}>
+          <strong style={{ display: 'block', marginBottom: '4px', fontSize: '0.9rem' }}>🎸 70'ler & 90'lar İkonları</strong>
+          <span style={{ fontSize: '0.8rem', opacity: '0.8' }}>Borg, McEnroe ve Navratilova spora rock star havası kattı. Sampras ve Agassi rekabeti ise kitleleri büyüledi.</span>
+        </div>
+        <div style={{ background: 'var(--ifm-background-color)', padding: '12px', borderRadius: '8px', border: '1px solid var(--ifm-toc-border-color)' }}>
+          <strong style={{ display: 'block', marginBottom: '4px', fontSize: '0.9rem' }}>👑 GOAT Nesli</strong>
+          <span style={{ fontSize: '0.8rem', opacity: '0.8' }}>Federer, Nadal, Djokovic ve Serena Williams tenisi tarihin en popüler ve karlı bireysel sporu haline getirdi.</span>
+        </div>
+      </div>
+    </div>
+  </Card>
+
+</BentoGrid>
