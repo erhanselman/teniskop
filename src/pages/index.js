@@ -13,7 +13,7 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'nowrap' }}><img src="/img/logo_teniskop.png" height="38" alt="Teniskop" /> {siteConfig.title}</div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'nowrap' }}><img src="/img/logo_teniskop.png" height="60" alt="Teniskop" /> {siteConfig.title}</div>
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         {/*  <div className={styles.buttons}>
